@@ -14,7 +14,7 @@
 
     <!-- 상단 긴급 공지 바 -->
     <div class="bg-gradient-to-r from-rose-600 to-amber-600 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center">
-        🔥 4월 마감 임박 | 현재 잔여 자리 <span class="underline decoration-yellow-300 font-bold">딱 2개 숍</span> 남았습니다.
+        🔥 10월 마감 임박 | 현재 잔여 자리 <span class="underline decoration-yellow-300 font-bold">딱 2개 숍</span> 남았습니다.
     </div>
 
     <!-- 네비게이션 -->
@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <!-- 해결책 섹션 (수정된 핵심 문구 반영) -->
+    <!-- 해결책 섹션 -->
     <section class="bg-slate-900/50 border-y border-slate-800 py-20">
         <div class="max-w-3xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <!-- 신청 폼 섹션 -->
+    <!-- 신청 폼 섹션 (Formspree 이메일 연동 완료) -->
     <section id="apply" class="max-w-2xl mx-auto px-6 py-20">
         <div class="bg-gradient-to-b from-slate-900 to-slate-900/90 border border-slate-800 p-8 md:p-10 rounded-3xl shadow-2xl">
             <div class="text-center mb-8">
@@ -125,14 +125,14 @@
                 <p class="text-sm text-slate-400">아래 정보를 남겨주시면, 24시간 내에 맞춤형 마케팅 진단과 상담을 도와드립니다.</p>
             </div>
 
-            <form id="leadForm" class="space-y-5" onsubmit="event.preventDefault(); alert('상담 신청이 정상적으로 접수되었습니다! 담당자가 확인 후 빠르게 연락드리겠습니다.');">
+            <form action="https://formspree.io/f/meaovgle" method="POST" class="space-y-5">
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-2">샵 이름 (상호명)</label>
-                    <input type="text" required placeholder="예: 연동 로블네일" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-500 transition">
+                    <input type="text" name="shop_name" required placeholder="예: 연동 로블네일" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-500 transition">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-2">업종 선택</label>
-                    <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-500 transition">
+                    <select name="shop_type" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-500 transition">
                         <option>네일 / 속눈썹 / 왁싱샵</option>
                         <option>피부관리 / 에스테틱</option>
                         <option>1:1 PT / 필라테스 / 요가</option>
@@ -142,7 +142,7 @@
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-2">연락받으실 번호 (휴대폰 번호)</label>
-                    <input type="tel" required placeholder="010-0000-0000" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-500 transition">
+                    <input type="tel" name="phone_number" required placeholder="010-0000-0000" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-rose-500 transition">
                 </div>
                 <button type="submit" class="w-full bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-rose-500/20 transition transform active:scale-95 text-center mt-4">
                     🚀 무료 진단 및 대행 문의 남기기
